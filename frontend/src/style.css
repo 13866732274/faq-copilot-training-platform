@@ -1,0 +1,523 @@
+:root {
+  --brand-accent: #07c160;
+  --brand-accent-hover: #06ad57;
+  --brand-accent-focus: rgba(7, 193, 96, 0.2);
+  --ui-page-bg: radial-gradient(1200px 420px at 85% -120px, rgb(7 193 96 / 8%), transparent 62%),
+    radial-gradient(900px 360px at -10% 0, rgb(64 158 255 / 7%), transparent 56%), var(--el-bg-color-page);
+  --ui-surface-1: color-mix(in srgb, var(--el-bg-color) 94%, #fff 6%);
+  --ui-surface-2: color-mix(in srgb, var(--el-fill-color-light) 72%, var(--el-bg-color) 28%);
+  --ui-border-soft: color-mix(in srgb, var(--el-border-color) 74%, transparent 26%);
+  --ui-border-strong: color-mix(in srgb, var(--el-border-color-dark) 68%, transparent 32%);
+  --ui-glow-primary: 0 0 0 1px rgb(7 193 96 / 12%), 0 14px 36px -22px rgb(7 193 96 / 38%);
+  --ui-shadow-soft: 0 12px 28px -22px rgb(0 0 0 / 20%);
+  --ui-shadow-float: 0 16px 36px -18px rgb(0 0 0 / 26%);
+  --ui-card-glass-bg: linear-gradient(
+      140deg,
+      color-mix(in srgb, #fff 42%, transparent 58%) 0%,
+      color-mix(in srgb, #fff 12%, transparent 88%) 42%,
+      transparent 75%
+    ),
+    var(--ui-surface-1);
+  --ui-card-highlight: 1px solid color-mix(in srgb, #fff 56%, transparent 44%);
+  --ui-card-highlight-soft: inset 0 1px 0 color-mix(in srgb, #fff 52%, transparent 48%);
+  --ui-overlay-bg: rgb(255 255 255 / 72%);
+  --font-family-ui: "HarmonyOS Sans SC", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "Helvetica Neue",
+    "Segoe UI", sans-serif;
+  --font-family-display: "HarmonyOS Sans SC", "PingFang SC", "Noto Sans SC", "Segoe UI", sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-body: 14px;
+  --font-size-h6: 15px;
+  --font-size-h5: 16px;
+  --font-size-title: 17px;
+  --font-size-h3: 20px;
+  --font-size-drawer-title: 16px;
+  --font-size-meta: 13px;
+  --line-height-tight: 1.35;
+  --line-height-base: 1.55;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --scene-transition-duration: 150ms;
+  --scene-transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --admin-control-w-xs: 130px;
+  --admin-control-w-sm: 140px;
+  --admin-control-w-md: 160px;
+  --admin-control-w-lg: 180px;
+  --admin-control-w-xl: 220px;
+  --admin-control-w-2xl: 240px;
+  --admin-control-w-date: 320px;
+  --el-color-primary: var(--brand-accent);
+  --el-color-primary-dark-2: #05a750;
+  --el-color-primary-light-3: #53d58d;
+  --el-color-primary-light-5: #86e2b0;
+  --el-color-primary-light-7: #b7efd1;
+  --el-color-primary-light-8: #cff5e0;
+  --el-color-primary-light-9: #e7fbef;
+}
+
+:root.dark {
+  --brand-accent: #15cc66;
+  --brand-accent-hover: #12b55a;
+  --brand-accent-focus: rgba(21, 204, 102, 0.26);
+  --ui-page-bg: radial-gradient(1200px 420px at 85% -120px, rgb(21 204 102 / 16%), transparent 62%),
+    radial-gradient(1100px 380px at -5% -5%, rgb(64 158 255 / 14%), transparent 60%), #12151a;
+  --ui-surface-1: color-mix(in srgb, #1c222b 86%, #0f1216 14%);
+  --ui-surface-2: color-mix(in srgb, #222936 74%, #11161e 26%);
+  --ui-border-soft: color-mix(in srgb, #4c5768 56%, transparent 44%);
+  --ui-border-strong: color-mix(in srgb, #6b7a92 64%, transparent 36%);
+  --ui-glow-primary: 0 0 0 1px rgb(21 204 102 / 22%), 0 16px 40px -24px rgb(21 204 102 / 52%);
+  --ui-shadow-soft: 0 16px 36px -20px rgb(0 0 0 / 44%);
+  --ui-shadow-float: 0 20px 44px -18px rgb(0 0 0 / 52%);
+  --ui-card-glass-bg: linear-gradient(
+      140deg,
+      color-mix(in srgb, #fff 12%, transparent 88%) 0%,
+      color-mix(in srgb, #fff 4%, transparent 96%) 44%,
+      transparent 74%
+    ),
+    var(--ui-surface-1);
+  --ui-card-highlight: 1px solid color-mix(in srgb, #fff 20%, transparent 80%);
+  --ui-card-highlight-soft: inset 0 1px 0 color-mix(in srgb, #fff 18%, transparent 82%);
+  --ui-overlay-bg: rgb(8 11 16 / 72%);
+  --el-color-primary: var(--brand-accent);
+  --el-color-primary-dark-2: #10b35a;
+  --el-color-primary-light-3: #5fdc95;
+  --el-color-primary-light-5: #8de6b2;
+  --el-color-primary-light-7: #b9efd0;
+  --el-color-primary-light-8: #d0f4df;
+  --el-color-primary-light-9: #e7faee;
+  --admin-drawer-shadow: -10px 0 30px rgb(0 0 0 / 28%);
+}
+
+:root {
+  --admin-drawer-shadow: -10px 0 30px rgb(0 0 0 / 12%);
+}
+
+/* 全局初始化：保证跨设备渲染一致 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.el-button {
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.15s ease;
+}
+
+.el-button:active {
+  transform: translateY(1px);
+}
+
+.el-card {
+  transition: box-shadow 0.22s ease, border-color 0.2s ease, transform 0.2s ease;
+  border-color: var(--ui-border-soft);
+  background: var(--ui-card-glass-bg);
+  border: var(--ui-card-highlight);
+  box-shadow: var(--ui-shadow-soft);
+  overflow: hidden;
+  position: relative;
+}
+
+.el-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: var(--ui-card-highlight-soft);
+}
+
+/* 管理表格微动效规范 */
+.admin-list-table .el-table__body tr > td,
+.el-table .el-table__body tr > td {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.admin-list-table .el-table__body tr:hover > td,
+.el-table .el-table__body tr:hover > td {
+  background-color: color-mix(in srgb, var(--el-color-primary-light-9) 42%, var(--el-bg-color) 58%);
+}
+
+.admin-list-table .el-table__body tr.current-row > td,
+.el-table .el-table__body tr.current-row > td {
+  background-color: color-mix(in srgb, var(--el-color-primary-light-8) 48%, var(--el-bg-color) 52%);
+}
+
+.el-tag,
+.status-tag {
+  transition: transform 0.15s ease, filter 0.2s ease;
+}
+
+.el-tag:hover,
+.status-tag:hover {
+  filter: saturate(1.08);
+}
+
+.el-pagination .el-pager li.is-active,
+.el-pagination.is-background .el-pager li.is-active {
+  color: var(--brand-accent);
+}
+
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: var(--brand-accent);
+  color: #fff;
+}
+
+.el-tabs__item:hover,
+.el-tabs__item.is-active {
+  color: var(--brand-accent);
+}
+
+.el-tabs__active-bar {
+  background-color: var(--brand-accent);
+}
+
+.el-switch.is-checked .el-switch__core {
+  border-color: var(--brand-accent);
+  background-color: var(--brand-accent);
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-family-ui);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-base);
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--ui-page-bg);
+  color: var(--el-text-color-primary);
+}
+
+#app {
+  isolation: isolate;
+}
+
+.app-scene {
+  position: relative;
+}
+
+.scene-fade-enter-active,
+.scene-fade-leave-active {
+  transition:
+    opacity var(--scene-transition-duration) var(--scene-transition-ease),
+    transform var(--scene-transition-duration) var(--scene-transition-ease);
+}
+
+.scene-fade-enter-from,
+.scene-fade-leave-to {
+  opacity: 0;
+  transform: translate3d(0, 6px, 0);
+}
+
+.scene-fade-enter-to,
+.scene-fade-leave-from {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.admin-card-title,
+.drawer-title,
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-display);
+  line-height: var(--line-height-tight);
+}
+
+.admin-card-title {
+  font-size: var(--font-size-title);
+}
+
+.meta,
+.admin-mobile-meta,
+.el-form-item__label,
+.el-descriptions__label {
+  font-size: var(--font-size-sm);
+}
+
+.admin-toolbar {
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.admin-card-header {
+  gap: var(--space-2);
+}
+
+.admin-card-header-actions {
+  gap: var(--space-2);
+}
+
+/* 管理端抽屉统一“丝滑”交互基线 */
+.admin-smooth-drawer .el-overlay {
+  backdrop-filter: blur(4px) saturate(120%);
+  background: var(--ui-overlay-bg);
+}
+
+.admin-smooth-drawer .el-drawer {
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: var(--admin-drawer-shadow);
+  background: var(--ui-surface-1);
+  border-left: 1px solid var(--ui-border-soft);
+}
+
+.admin-smooth-drawer .drawer-body {
+  animation: adminDrawerBodyIn 0.2s ease-out;
+}
+
+/* 抽屉头部/底部统一 utility，减少页面细微差异 */
+.admin-drawer-body {
+  height: 100%;
+  overflow-y: auto;
+  padding: 10px 10px 14px;
+}
+
+.admin-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.admin-drawer-header > strong {
+  font-size: var(--font-size-drawer-title);
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--el-text-color-primary);
+}
+
+.admin-drawer-actions,
+.admin-drawer-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-drawer-footer {
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* 管理端工具条统一 utility */
+.admin-toolbar {
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.admin-toolbar-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* 管理端卡片标题区统一 utility */
+.admin-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-card-title {
+  font-size: var(--font-size-title);
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--el-text-color-primary);
+}
+
+.admin-card-header-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.admin-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 管理端空态与分页统一 utility */
+.admin-empty {
+  padding: 10px 0;
+  font-size: var(--font-size-meta);
+}
+
+.admin-pager {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.admin-mobile-list {
+  display: grid;
+  gap: 10px;
+}
+
+.admin-mobile-item {
+  border: 1px solid var(--ui-border-soft);
+  background: var(--ui-surface-1);
+}
+
+.admin-mobile-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.admin-mobile-meta {
+  margin-top: 6px;
+  color: var(--el-text-color-secondary);
+  font-size: var(--font-size-meta);
+}
+
+.admin-mobile-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* 管理端控件宽度基线 */
+.admin-control-w-xs {
+  width: var(--admin-control-w-xs);
+}
+
+.admin-control-w-sm {
+  width: var(--admin-control-w-sm);
+}
+
+.admin-control-w-md {
+  width: var(--admin-control-w-md);
+}
+
+.admin-control-w-lg {
+  width: var(--admin-control-w-lg);
+}
+
+.admin-control-w-xl {
+  width: var(--admin-control-w-xl);
+}
+
+.admin-control-w-2xl {
+  width: var(--admin-control-w-2xl);
+}
+
+.admin-control-w-date {
+  width: var(--admin-control-w-date);
+}
+
+.admin-control-w-full {
+  width: 100%;
+}
+
+.el-popper.is-light,
+.el-picker__popper,
+.el-select__popper {
+  border: 1px solid var(--ui-border-soft) !important;
+  box-shadow: var(--ui-shadow-float) !important;
+  background: var(--ui-surface-1) !important;
+  color: var(--el-text-color-primary) !important;
+}
+
+.el-popper.is-dark {
+  color: #fff !important;
+}
+
+.el-select-dropdown__item.hover,
+.el-select-dropdown__item:hover {
+  background: color-mix(in srgb, var(--el-color-primary-light-9) 64%, transparent 36%);
+}
+
+@keyframes adminDrawerBodyIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-body: 13px;
+    --font-size-title: 16px;
+    --font-size-drawer-title: 15px;
+    --scene-transition-duration: 130ms;
+  }
+
+  .admin-drawer-body {
+    padding: 8px 8px 12px;
+  }
+  .admin-toolbar {
+    margin-bottom: 10px;
+  }
+  .admin-toolbar .admin-control-w-xs,
+  .admin-toolbar .admin-control-w-sm,
+  .admin-toolbar .admin-control-w-md,
+  .admin-toolbar .admin-control-w-lg,
+  .admin-toolbar .admin-control-w-xl,
+  .admin-toolbar .admin-control-w-2xl,
+  .admin-toolbar .admin-control-w-date {
+    width: 100% !important;
+  }
+  .admin-pager {
+    justify-content: center;
+  }
+  .admin-pager .el-pagination {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "faq-webhook",
+  "version": "1.0.0",
+  "description": "将微信消息转发到 ChatTrainer Bot Webhook，由服务器完成 FAQ 匹配和合规处理后返回回复",
+  "author": "chattrainer",
+  "entry": "index.js",
+  "permissions": [
+    "network",
+    "messaging"
+  ],
+  "config": {
+    "webhook_url": "http://192.168.9.139/api/v1/bot/wechat-faq",
+    "feedback_url": "http://192.168.9.139/api/v1/bot/wechat-faq/feedback",
+    "bot_secret": "please-change-to-your-bot-webhook-secret",
+    "health_url": "http://192.168.9.139/api/v1/bot/health",
+    "retry_times": 2,
+    "mode_risk_keywords": ["费用", "价格", "医保", "报销", "疗程", "手术", "住院"]
+  }
+}
